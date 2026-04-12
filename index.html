@@ -3,26 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ImmoPro — Agent immobilier</title>
-
+    <title>ImmoPro — Agent Immobilier Bordeaux</title>
     <link rel="stylesheet" href="style.css">
-
-    <!-- BONNES FONTS (match ton CSS) -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;0,700;1,300;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <!-- HEADER -->
 <header id="header">
     <div class="logo">
-        <img src="images/logo.png" style="height:32px;border-radius:6px;">
+        <span class="logo-mark">◆</span>
         <span class="logo-text">ImmoPro</span>
     </div>
 
-    <nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+    </button>
+
+    <nav id="nav">
         <a href="#home">Accueil</a>
         <a href="#services">Services</a>
-        <a href="#gallery">Biens</a>
+        <a href="#trust">À propos</a>
+        <a href="#gallery">Réalisations</a>
+        <a href="#reviews">Avis</a>
         <a href="#contact">Contact</a>
     </nav>
 
@@ -31,46 +34,64 @@
 
 <!-- HERO -->
 <section id="home">
-    <div class="hero-shapes">
-        <div class="shape shape-1"></div>
-        <div class="shape shape-2"></div>
-        <div class="shape shape-3"></div>
-    </div>
+    <div class="hero-bg-texture"></div>
+    <div class="hero-line hero-line-1"></div>
+    <div class="hero-line hero-line-2"></div>
 
     <div class="hero-inner">
-        <div class="hero-content">
-            <div class="hero-tag">Agent immobilier · Achat · Vente · Location</div>
+        <div class="hero-left">
+            <div class="hero-label">
+                <span class="label-line"></span>
+                Agent immobilier · Bordeaux & Gironde
+            </div>
 
             <h1 class="hero-title">
-                Trouvez votre bien<br>
-                <em>sans stress<br>ni mauvaises surprises</em>
+                L'immobilier<br>
+                <em>à votre mesure.</em>
             </h1>
 
             <p class="hero-description">
-                ImmoPro vous accompagne dans vos projets d’achat, de vente et d’estimation. 
-                Un service transparent, rapide et humain pour concrétiser votre projet immobilier.
+                ImmoPro vous accompagne dans chaque étape de votre projet — achat, vente, estimation ou gestion locative. Un service transparent, humain et rigoureux pour que chaque transaction soit une réussite.
             </p>
 
             <div class="hero-actions">
                 <a href="#contact" class="btn-primary">Estimer mon bien</a>
-                <a href="tel:+33600000000" class="btn-secondary">📞 Appel direct</a>
+                <a href="tel:+33600000000" class="btn-outline">Appel direct →</a>
+            </div>
+
+            <div class="hero-strip">
+                <div class="strip-item">
+                    <div class="strip-num">+500</div>
+                    <div class="strip-label">Ventes réalisées</div>
+                </div>
+                <div class="strip-divider"></div>
+                <div class="strip-item">
+                    <div class="strip-num">10 ans</div>
+                    <div class="strip-label">D'expérience locale</div>
+                </div>
+                <div class="strip-divider"></div>
+                <div class="strip-item">
+                    <div class="strip-num">48h</div>
+                    <div class="strip-label">Délai d'estimation</div>
+                </div>
             </div>
         </div>
 
-        <div class="hero-badge-group">
-            <div class="hero-badge">
-                <div class="badge-num">+500</div>
-                <div class="badge-label">Ventes réalisées</div>
-            </div>
-
-            <div class="hero-badge accent">
-                <div class="badge-num">PRO</div>
-                <div class="badge-label">Agence certifiée</div>
-            </div>
-
-            <div class="hero-badge">
-                <div class="badge-num">48h</div>
-                <div class="badge-label">Estimation</div>
+        <div class="hero-right">
+            <div class="hero-image-frame">
+                <div class="frame-corner frame-tl"></div>
+                <div class="frame-corner frame-tr"></div>
+                <div class="frame-corner frame-bl"></div>
+                <div class="frame-corner frame-br"></div>
+                <img src="images/maison3.jpg" alt="Bien immobilier de prestige" class="hero-img">
+                <div class="hero-floating-card">
+                    <div class="fc-dot"></div>
+                    <div>
+                        <div class="fc-title">Bien du mois</div>
+                        <div class="fc-sub">Villa T6 Prestige · Bordeaux Lac</div>
+                    </div>
+                    <div class="fc-price">485 000 €</div>
+                </div>
             </div>
         </div>
     </div>
@@ -78,137 +99,150 @@
 
 <!-- SERVICES -->
 <section id="services">
-    <div class="services-header">
-        <div class="section-tag">Nos services</div>
-        <h2 class="section-title">Ce qu'on fait <span class="highlight">pour vous</span></h2>
-    </div>
+    <div class="section-eyebrow">Nos prestations</div>
+    <h2 class="section-title">Ce que nous <em>faisons pour vous</em></h2>
 
     <div class="services-grid">
         <div class="service-card">
-            <div class="service-icon">🏠</div>
+            <div class="service-num">01</div>
+            <div class="service-icon-wrap">🏠</div>
             <h3>Achat immobilier</h3>
-            <p>Recherche personnalisée de maisons et appartements selon vos critères et votre budget.</p>
-            <div class="service-price">Accompagnement</div>
+            <p>Recherche personnalisée selon vos critères et votre budget. Nous sélectionnons pour vous les biens qui correspondent vraiment à votre projet de vie.</p>
+            <div class="service-tag">Accompagnement complet</div>
         </div>
 
         <div class="service-card featured">
-            <div class="service-icon">💰</div>
+            <div class="service-num">02</div>
+            <div class="service-icon-wrap">💰</div>
             <h3>Vente de biens</h3>
-            <p>Estimation précise, mise en valeur et diffusion de votre bien pour une vente rapide.</p>
-            <div class="service-price">Estimation gratuite</div>
+            <p>Estimation précise, mise en valeur photographique professionnelle et diffusion ciblée. Votre bien vendu rapidement, au meilleur prix.</p>
+            <div class="service-tag">Estimation offerte</div>
         </div>
 
         <div class="service-card">
-            <div class="service-icon">📊</div>
-            <h3>Estimation</h3>
-            <p>Analyse complète du marché pour déterminer le juste prix de votre bien immobilier.</p>
-            <div class="service-price">Offert</div>
+            <div class="service-num">03</div>
+            <div class="service-icon-wrap">📊</div>
+            <h3>Estimation de marché</h3>
+            <p>Analyse complète et rigoureuse du marché local pour déterminer la valeur juste de votre bien immobilier, sans engagement.</p>
+            <div class="service-tag">Gratuit & sans engagement</div>
         </div>
 
         <div class="service-card">
-            <div class="service-icon">🔑</div>
+            <div class="service-num">04</div>
+            <div class="service-icon-wrap">🔑</div>
             <h3>Gestion locative</h3>
-            <p>Gestion complète de vos biens : locataires, loyers et suivi administratif.</p>
-            <div class="service-price">Sur devis</div>
+            <p>Gestion complète de vos biens en location : sélection des locataires, encaissement des loyers et suivi administratif et technique.</p>
+            <div class="service-tag">Sur devis</div>
         </div>
     </div>
 </section>
-<!-- TRUST / CONFIANCE -->
+
+<!-- TRUST -->
 <section id="trust">
-    <div class="trust-container">
-
-        <div class="trust-text">
-            <div class="section-tag">Pourquoi nous faire confiance ?</div>
-
-            <h2 class="section-title">
-                Une agence immobilière <span class="highlight">de confiance</span>
-            </h2>
-
-            <p class="trust-desc">
-                Fort de plus de 10 ans d’expérience sur le marché bordelais, ImmoPro a aidé des centaines de clients à vendre ou acheter leur bien rapidement et au meilleur prix. 
-                Notre équipe de professionnels garantit un suivi personnalisé et transparent.
+    <div class="trust-wrapper">
+        <div class="trust-left">
+            <div class="section-eyebrow">Notre histoire</div>
+            <h2 class="section-title">Une agence <em>bordelaise<br>de confiance</em></h2>
+            <p class="trust-text">
+                Fort de plus de 10 ans d'expérience sur le marché bordelais, ImmoPro a accompagné des centaines de familles et d'investisseurs dans leurs projets immobiliers. Notre approche : écoute, transparence et expertise locale pour chaque client.
             </p>
+            <div class="trust-badges">
+                <div class="trust-badge">✓ Carte professionnelle</div>
+                <div class="trust-badge">✓ Assurance RCP</div>
+                <div class="trust-badge">✓ Mandat exclusif</div>
+                <div class="trust-badge">✓ Garantie financière</div>
+            </div>
         </div>
 
-        <div class="trust-stats">
-
-            <div class="trust-item">
-                <div class="trust-num">+500</div>
-                <div class="trust-label">Biens vendus</div>
+        <div class="trust-right">
+            <div class="trust-stat">
+                <div class="ts-num">+500</div>
+                <div class="ts-label">Biens vendus</div>
             </div>
-
-            <div class="trust-item">
-                <div class="trust-num">98%</div>
-                <div class="trust-label">Taux de satisfaction clients</div>
+            <div class="trust-stat">
+                <div class="ts-num">98%</div>
+                <div class="ts-label">Clients satisfaits</div>
             </div>
-
-            <div class="trust-item">
-                <div class="trust-num">10 ans</div>
-                <div class="trust-label">Expérience sur le marché local</div>
+            <div class="trust-stat">
+                <div class="ts-num">10 ans</div>
+                <div class="ts-label">Sur le marché local</div>
             </div>
-
         </div>
-
     </div>
 </section>
-<section id="reviews">
 
-    <div class="section-tag">Témoignages</div>
-    <h2 class="section-title">
-        Ce que disent <span class="highlight">nos clients</span>
-    </h2>
-
-    <div class="reviews-grid">
-
-        <div class="review-card">
-            <div class="review-stars">★★★★★</div>
-            <p>"Accompagnement exceptionnel du début à la fin. L’équipe nous a guidés à chaque étape de la vente, de l’estimation jusqu’à la signature chez le notaire. 
-        Notre maison a été vendue en moins de trois semaines au prix souhaité, avec un suivi très professionnel et rassurant."</p>
-            <div class="review-author">— Sophie M., Bordeaux</div>
-        </div>
-
-        <div class="review-card">
-            <div class="review-stars">★★★★★</div>
-            <p>"Très bonne expérience avec ImmoPro. L’estimation de notre bien était précise et cohérente avec le marché local. 
-        Les conseillers sont réactifs, disponibles et transparents sur chaque étape. Nous avons particulièrement apprécié le suivi personnalisé et les conseils pour optimiser la vente."</p>
-            <div class="review-author">— Thomas R., Mérignac</div>
-        </div>
-
-        <div class="review-card">
-            <div class="review-stars">★★★★★</div>
-            <p>"Nous avons acheté notre première maison grâce à ImmoPro et tout s’est déroulé sans stress. 
-        Ils ont su comprendre nos besoins, nous proposer des biens adaptés et nous accompagner jusqu’à la signature. 
-        Un vrai gain de temps et une équipe très humaine, toujours à l’écoute."</p>
-            <div class="review-author">— Julie & Karim, Pessac</div>
-        </div>
-
-    </div>
-
-</section>
 <!-- GALLERY -->
 <section id="gallery">
-    <div class="section-tag">Biens vendus</div>
-    <h2 class="section-title">Nos <span class="highlight">réalisations</span></h2>
+    <div class="section-eyebrow">Portfolio</div>
+    <h2 class="section-title">Quelques <em>réalisations récentes</em></h2>
 
     <div class="gallery-grid">
         <div class="gallery-item large">
-            <img src="images/maison1.jpg">
-            <div class="gallery-caption">Maison familiale</div>
+            <img src="images/maison1.jpg" alt="Maison familiale">
+            <div class="gallery-info">
+                <div class="gi-tag">Vendu</div>
+                <div class="gi-title">Maison familiale · T5</div>
+                <div class="gi-location">Bordeaux — Caudéran</div>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/maison2.jpg" alt="Appartement centre-ville">
+            <div class="gallery-info">
+                <div class="gi-tag">Vendu</div>
+                <div class="gi-title">Appartement · T3</div>
+                <div class="gi-location">Bordeaux centre</div>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/maison3.jpg" alt="Villa prestige">
+            <div class="gallery-info">
+                <div class="gi-tag">Vendu</div>
+                <div class="gi-title">Villa · T6 Prestige</div>
+                <div class="gi-location">Bordeaux — Lac</div>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/maison4.jpg" alt="Investissement locatif">
+            <div class="gallery-info">
+                <div class="gi-tag">En gestion</div>
+                <div class="gi-title">Investissement locatif</div>
+                <div class="gi-location">Mérignac</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews">
+    <div class="section-eyebrow">Témoignages</div>
+    <h2 class="section-title">Ce que disent <em>nos clients</em></h2>
+
+    <div class="reviews-grid">
+        <div class="review-card">
+            <div class="review-quote">❝</div>
+            <p>Accompagnement exceptionnel du début à la fin. Notre maison a été vendue en moins de trois semaines au prix souhaité, avec un suivi très professionnel et rassurant à chaque étape.</p>
+            <div class="review-footer">
+                <div class="review-stars">★★★★★</div>
+                <div class="review-author">Sophie M. · Bordeaux</div>
+            </div>
         </div>
 
-        <div class="gallery-item">
-            <img src="images/maison2.jpg">
-            <div class="gallery-caption">Appartement centre-ville</div>
+        <div class="review-card">
+            <div class="review-quote">❝</div>
+            <p>L'estimation de notre bien était précise et cohérente avec le marché local. Les conseillers sont réactifs, transparents et toujours disponibles. Un suivi vraiment personnalisé.</p>
+            <div class="review-footer">
+                <div class="review-stars">★★★★★</div>
+                <div class="review-author">Thomas R. · Mérignac</div>
+            </div>
         </div>
 
-        <div class="gallery-item">
-            <img src="images/maison3.jpg">
-            <div class="gallery-caption">Villa vendue rapidement</div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="images/maison4.jpg">
-            <div class="gallery-caption">Investissement locatif</div>
+        <div class="review-card">
+            <div class="review-quote">❝</div>
+            <p>Nous avons acheté notre première maison grâce à ImmoPro, sans aucun stress. Ils ont su comprendre nos besoins et nous accompagner jusqu'à la signature. Une équipe vraiment humaine.</p>
+            <div class="review-footer">
+                <div class="review-stars">★★★★★</div>
+                <div class="review-author">Julie & Karim · Pessac</div>
+            </div>
         </div>
     </div>
 </section>
@@ -216,59 +250,76 @@
 <!-- CONTACT -->
 <section id="contact">
     <div class="contact-wrapper">
-
         <div class="contact-left">
-            <div class="section-tag">Contact</div>
-            <h2 class="section-title">Parlons de votre projet</h2>
+            <div class="section-eyebrow">Parlons de votre projet</div>
+            <h2 class="section-title">Contactez<br><em>ImmoPro</em></h2>
 
             <div class="contact-details">
                 <div class="cd-item">
-                    <span class="cd-icon">📍</span>
+                    <div class="cd-icon">📍</div>
                     <div>
-                        <strong>Zone</strong>
-                        <p>Votre région</p>
+                        <strong>Zone d'intervention</strong>
+                        <p>Bordeaux & Gironde (33)</p>
                     </div>
                 </div>
-
                 <div class="cd-item">
-                    <span class="cd-icon">📞</span>
+                    <div class="cd-icon">📞</div>
                     <div>
                         <strong>Téléphone</strong>
-                        <p>06 XX XX XX XX</p>
+                        <p>+33 6 XX XX XX XX</p>
                     </div>
                 </div>
-
                 <div class="cd-item">
-                    <span class="cd-icon">✉️</span>
+                    <div class="cd-icon">✉️</div>
                     <div>
                         <strong>Email</strong>
                         <p>contact@immopro.fr</p>
+                    </div>
+                </div>
+                <div class="cd-item">
+                    <div class="cd-icon">🕐</div>
+                    <div>
+                        <strong>Horaires</strong>
+                        <p>Lun–Sam 9h–19h</p>
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="contact-right">
-            <form>
+            <form action="https://formspree.io/f/xaqlnjlk" method="POST">
                 <div class="form-group">
-                    <label>Nom</label>
-                    <input type="text" placeholder="Votre nom">
+                    <label for="name">Nom complet</label>
+                    <input type="text" id="name" name="name" placeholder="Votre nom" required>
                 </div>
-
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="votre@email.fr" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Téléphone</label>
+                        <input type="tel" id="phone" name="phone" placeholder="06 XX XX XX XX">
+                    </div>
+                </div>
                 <div class="form-group">
-                    <label>Email</label>
-                    <input type="email" placeholder="Votre email">
+                    <label for="project">Votre projet</label>
+                    <select id="project" name="project">
+                        <option value="">Sélectionnez…</option>
+                        <option>Achat immobilier</option>
+                        <option>Vente de bien</option>
+                        <option>Estimation gratuite</option>
+                        <option>Gestion locative</option>
+                        <option>Autre</option>
+                    </select>
                 </div>
-
                 <div class="form-group">
-                    <label>Message</label>
-                    <textarea placeholder="Décrivez votre projet immobilier"></textarea>
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Décrivez votre projet en quelques mots…" required></textarea>
                 </div>
-
-                <button class="btn-primary">Envoyer</button>
+                <button type="submit" class="btn-primary">Envoyer ma demande</button>
             </form>
         </div>
-
     </div>
 </section>
 
@@ -276,37 +327,56 @@
 <footer>
     <div class="footer-top">
         <div class="footer-logo">
-            <img src="images/logo.png" style="height:28px;border-radius:6px;">
+            <span class="logo-mark">◆</span>
             <span>ImmoPro</span>
         </div>
-
-        <div class="footer-nav">
-            <a href="#">Accueil</a>
-            <a href="#">Services</a>
-            <a href="#">Contact</a>
+        <nav class="footer-nav">
+            <a href="#home">Accueil</a>
+            <a href="#services">Services</a>
+            <a href="#trust">À propos</a>
+            <a href="#gallery">Réalisations</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="footer-social">
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">LinkedIn</a>
         </div>
     </div>
-
     <div class="footer-bottom">
-        <p>© 2026 ImmoPro</p>
+        <p>© 2026 ImmoPro · Agent immobilier Bordeaux</p>
+        <p><a href="#">Mentions légales</a> · <a href="#">Politique de confidentialité</a></p>
     </div>
 </footer>
 
-<!-- SCRIPT animations -->
 <script>
-window.addEventListener('scroll', () => {
-    document.getElementById('header').classList.toggle('scrolled', window.scrollY > 60);
-});
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-        if (e.isIntersecting) e.target.classList.add('visible');
+    // Header scroll
+    window.addEventListener('scroll', () => {
+        document.getElementById('header').classList.toggle('scrolled', window.scrollY > 60);
     });
-});
 
-document.querySelectorAll(
-    '.service-card, .gallery-item, .cd-item, .review-card, .stat-item, .trust-item'
-).forEach(el => observer.observe(el));
+    // Menu burger
+    const toggle = document.getElementById('menuToggle');
+    const nav    = document.getElementById('nav');
+    toggle.addEventListener('click', () => {
+        nav.classList.toggle('open');
+        toggle.classList.toggle('active');
+    });
+    nav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            nav.classList.remove('open');
+            toggle.classList.remove('active');
+        });
+    });
+
+    // Animations scroll
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.08 });
+
+    document.querySelectorAll(
+        '.service-card, .trust-stat, .gallery-item, .review-card, .cd-item, .strip-item'
+    ).forEach(el => observer.observe(el));
 </script>
 
 </body>
